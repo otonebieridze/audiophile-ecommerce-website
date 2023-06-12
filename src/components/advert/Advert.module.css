@@ -1,0 +1,39 @@
+.container {
+  width: calc(100% - 200px);
+  max-width: 1300px;
+  height: 500px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
+}
+.advert-text {
+  width: calc(50% - 100px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.advert-text h1 {
+  color: #000000;
+  font-size: 40px;
+  font-family: 'Manrope';
+  line-height: 44px;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+}
+.advert-text h1 span {
+  color: #D87D4A;
+}
+.advert-text p {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Manrope';
+  opacity: 0.5;
+}
+.advert-image {
+  width: calc(50% - 15px);
+  height: 100%;
+  border-radius: 8px;
+}

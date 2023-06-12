@@ -1,0 +1,146 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  width: 100%;
+  min-height: 300px;
+  background-color: white;
+}
+
+.main .product-1 {
+  width: calc(100% - 200px);
+  max-width: 1300px;
+  height: 500px;
+  background-color: #D87D4A;
+  border-radius: 8px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.main .product-1 .speaker-img {
+  width: 400px;
+  height: 480px;
+}
+.main .product-1-description {
+  width: 340px;
+  height: 430px;
+}
+.main .product-1-description h1 {
+  color: #FFFFFF;
+  font-size: 50px;
+  font-family: 'Manrope';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.main .product-1-description p {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-family: 'Manrope';
+  opacity: 0.75;
+  margin-top: 20px;
+}
+.main .product-1-description button {
+  height: 48px;
+  width: 160px;
+  background-color: #000000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 40px;
+  transition: 0.3s;
+  
+  color: #FFFFFF;
+  font-size: 13px;
+  font-family: 'Manrope';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main .product-1-description button:hover {
+  background-color: #4C4C4C;
+}
+.circles {
+  width: 70%;
+  height: calc(100% + 200px);
+  position: absolute;
+  top: -30px;
+  left: -90px;
+  z-index: -1;
+}
+
+.main .product-2 {
+  width: calc(100% - 200px);
+  max-width: 1300px;
+  height: 300px;
+  background: url("../../assets/speaker-preview2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  margin: auto;
+  transform: translateY(-50px);
+}
+.main .product-2 div {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.main .product-2 h1,.main .product-3 h1 {
+  color: #000000;
+  font-size: 28px;
+  font-family: 'Manrope';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 70px;
+}
+.main .product-2 button, .main .product-3 button {
+  height: 48px;
+  width: 160px;
+  border: 1px solid #000000;
+  margin-left: 70px;
+
+  color: #000000;
+  font-size: 14px;
+  font-family: 'Manrope';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main .product-2 button:hover, .main .product-3 button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.main .product-3 {
+  width: calc(100% - 200px);
+  max-width: 1300px;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.main .product-3 img {
+  width: calc(50% - 15px);
+  height: 100%;
+  border-radius: 8px;
+}
+.main .product-3 div {
+  width: calc(50% - 15px);
+  height: 100%;
+  background-color: #cacacaa6;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}

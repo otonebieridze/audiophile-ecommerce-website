@@ -1,0 +1,63 @@
+.container {
+  width: calc(100% - 200px);
+  max-width: 1300px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: auto;
+}
+.product {
+  width: 250px;
+  height: 180px;
+  background-color: #cacacaa6;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  transition: 0.3s;
+}
+.product:hover .shopping {
+  color: #D87D4A;
+}
+.product img {
+  width: 140px;
+  height: 160px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.product h1 {
+  color: #000000;
+  font-size: 18px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.28571px;
+  text-transform: uppercase;
+  transform: translateY(100px);
+}
+.product .shopping {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.product p {
+  font-size: 13px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateY(100px);
+}
+.product .arrow-icon {
+  font-size: 15px;
+  margin-left: 6px;
+  transform: translateY(100px);
+}
