@@ -5,7 +5,7 @@
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
-  margin: 100px auto;
+  margin-top: 150px;
 }
 .advert-text {
   width: calc(50% - 100px);

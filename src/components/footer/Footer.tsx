@@ -2,7 +2,11 @@ import styles from "./Footer.module.css";
 import logo from "../../assets/logo.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookSquare, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebookSquare,
+  faTwitter,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 import { Link } from "react-router-dom";
 
@@ -23,10 +27,34 @@ function Footer() {
 
         <div className={styles["right-side"]}>
           <ul>
-            <Link style={{ textDecoration: "none" }} to="/"><li>home</li></Link>
-            <Link style={{ textDecoration: "none" }} to="/headphones"><li>headphones</li></Link>
-            <Link style={{ textDecoration: "none" }} to="/speakers"><li>speakers</li></Link>
-            <Link style={{ textDecoration: "none" }} to="/earphones"><li>earphones</li></Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              onClick={() => window.scrollTo(0, 0)}
+              to="/"
+            >
+              <li>home</li>
+            </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              onClick={() => window.scrollTo(0, 0)}
+              to="/headphones"
+            >
+              <li>headphones</li>
+            </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              onClick={() => window.scrollTo(0, 0)}
+              to="/speakers"
+            >
+              <li>speakers</li>
+            </Link>
+            <Link
+              style={{ textDecoration: "none" }}
+              onClick={() => window.scrollTo(0, 0)}
+              to="/earphones"
+            >
+              <li>earphones</li>
+            </Link>
           </ul>
 
           <div>

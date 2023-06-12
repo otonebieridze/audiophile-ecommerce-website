@@ -1,6 +1,6 @@
 import styles from "./Products.module.css";
 
-import headphonesImg from "../../assets/headphone-category-page-preview.png";
+import headphonesImg from "../../assets/headphone-page-preview.png";
 import speakerImg from "../../assets/speaker-category-page-preview.png";
 import earphonesImg from "../../assets/earphone-category-page-preview.png";
 
@@ -30,7 +30,12 @@ function Products() {
   return (
     <div className={styles.container}>
       {productsArr.map((product, index) => (
-        <Link key={index} style={{ textDecoration: "none" }} to={product.link}>
+        <Link
+          key={index}
+          style={{ textDecoration: "none" }}
+          onClick={() => window.scrollTo(0, 0)}
+          to={product.link}
+        >
           <div className={styles.product}>
             <img src={product.img} alt="product-img" />
             <h1>{product.name}</h1>

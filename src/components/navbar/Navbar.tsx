@@ -9,27 +9,46 @@ function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles["nav-bar"]}>
-        <Link to="/">
+        <Link to="/" onClick={() => window.scrollTo(0, 0)}>
           <img src={logo} alt="logo" />
         </Link>
 
         <ul>
-          <Link className={styles.link} to="/">
+          <Link
+            className={styles.link}
+            to="/"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>home</li>
           </Link>
-          <Link className={styles.link} to="/headphones">
+          <Link
+            className={styles.link}
+            to="/headphones"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>headphones</li>
           </Link>
-          <Link className={styles.link} to="/speakers">
+          <Link
+            className={styles.link}
+            to="/speakers"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>speakers</li>
           </Link>
-          <Link className={styles.link} to="/earphones">
+          <Link
+            className={styles.link}
+            to="/earphones"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <li>earphones</li>
           </Link>
         </ul>
 
-        <FontAwesomeIcon className={styles["cart-icon"]} icon={faCartShopping} />
-      </div>  
+        <FontAwesomeIcon
+          className={styles["cart-icon"]}
+          icon={faCartShopping}
+        />
+      </div>
     </div>
   );
 }
