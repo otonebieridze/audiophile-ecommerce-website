@@ -22,6 +22,7 @@
   line-height: 44px;
   letter-spacing: 1.42857px;
   text-transform: uppercase;
+  text-align: left;
 }
 .advert-text h1 span {
   color: #D87D4A;
@@ -31,6 +32,7 @@
   font-size: 15px;
   font-family: 'Manrope';
   opacity: 0.5;
+  text-align: left;
 }
 .advert-image {
   width: calc(50% - 15px);

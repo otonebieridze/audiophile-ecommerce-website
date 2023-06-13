@@ -33,7 +33,6 @@ function Products() {
         <Link
           key={index}
           style={{ textDecoration: "none" }}
-          onClick={() => window.scrollTo(0, 0)}
           to={product.link}
         >
           <div className={styles.product}>

@@ -1,5 +1,6 @@
 import styles from "./Hero.module.css";
 import imageHero from "../../assets/image-hero.png";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -12,7 +13,12 @@ function Hero() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </h4>
-          <button>See Product</button>
+          <Link
+            style={{ width: "160px" }}
+            to="/headphones/xx99-mark-two-headphones"
+          >
+            <button>See Product</button>
+          </Link>
         </div>
         <img src={imageHero} alt="image-hero" />
       </div>

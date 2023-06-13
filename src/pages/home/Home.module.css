@@ -15,7 +15,7 @@
   height: 500px;
   background-color: #D87D4A;
   border-radius: 8px;
-  margin: 100px auto;
+  margin: 150px auto;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -46,8 +46,8 @@
   margin-top: 20px;
 }
 .main .product-1-description button {
-  height: 48px;
   width: 160px;
+  height: 48px;
   background-color: #000000;
   border: none;
   outline: none;
@@ -102,8 +102,8 @@
   margin-left: 70px;
 }
 .main .product-2 button, .main .product-3 button {
-  height: 48px;
   width: 160px;
+  height: 48px;
   border: 1px solid #000000;
   margin-left: 70px;
 

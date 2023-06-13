@@ -29,28 +29,24 @@ function Footer() {
           <ul>
             <Link
               style={{ textDecoration: "none" }}
-              onClick={() => window.scrollTo(0, 0)}
               to="/"
             >
               <li>home</li>
             </Link>
             <Link
               style={{ textDecoration: "none" }}
-              onClick={() => window.scrollTo(0, 0)}
               to="/headphones"
             >
               <li>headphones</li>
             </Link>
             <Link
               style={{ textDecoration: "none" }}
-              onClick={() => window.scrollTo(0, 0)}
               to="/speakers"
             >
               <li>speakers</li>
             </Link>
             <Link
               style={{ textDecoration: "none" }}
-              onClick={() => window.scrollTo(0, 0)}
               to="/earphones"
             >
               <li>earphones</li>

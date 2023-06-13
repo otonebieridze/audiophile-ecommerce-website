@@ -5,10 +5,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: auto;
+  margin: 60px auto;
 }
 .product {
-  width: 250px;
+  width: 320px;
   height: 180px;
   background-color: #F1F1F1;
   border-radius: 8px;

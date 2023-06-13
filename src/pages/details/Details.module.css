@@ -1,0 +1,260 @@
+.container {
+  width: calc(100% - 200px);
+  max-width: 1300px;
+  min-height: 100vh;
+  margin: auto;
+}
+.go-back {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  font-size: 15px;
+  font-family: "Manrope";
+  opacity: 0.5;
+  cursor: pointer;
+  margin-top: 65px;
+}
+
+/* product */
+.product {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.product img {
+  width: calc(50% - 30px);
+  height: 100%;
+}
+.product .product-info {
+  width: calc(50% - 30px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product div h3 {
+  color: #d87d4a;
+  font-size: 14px;
+  font-family: "Manrope";
+  line-height: 19px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+.product div h1 {
+  color: #000000;
+  font-size: 40px;
+  font-family: "Manrope";
+  line-height: 44px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.product div .description {
+  color: #000000;
+  font-size: 15px;
+  font-family: "Manrope";
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 30px;
+}
+.product div .price {
+  color: #000000;
+  font-size: 18px;
+  font-family: "Manrope";
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+.product-footer {
+  width: 290px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+.product-footer .quantity-handler {
+  width: 100px;
+  height: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product-footer .quantity-handler button {
+  border: none;
+  color: #000000;
+  font-size: 15px;
+  font-family: "Manrope";
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.product-footer .quantity-handler button:hover {
+  color: #d87d4a;
+}
+.product-footer .add-btn {
+  width: 160px;
+  height: 100%;
+  background-color: #d87d4a;
+  border: none;
+  cursor: pointer;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Manrope";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.product-footer .add-btn:hover {
+  background-color: #fbaf85;
+}
+
+/* features */
+.features {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  margin-top: 135px;
+}
+.features .left-side {
+  width: 60%;
+  min-height: 100%;
+}
+.features .right-side {
+  width: 40%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features h1 {
+  color: #000000;
+  font-size: 32px;
+  font-family: "Manrope";
+  line-height: 36px;
+  letter-spacing: 1.14px;
+  text-transform: uppercase;
+}
+.features p,
+.features ul li span {
+  color: #000000;
+  font-size: 15px;
+  font-family: "Manrope";
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.features p,
+.features ul {
+  margin-top: 30px;
+}
+.features ul li {
+  margin-top: 7px;
+  list-style: none;
+}
+.features ul li b {
+  font-family: "Manrope";
+}
+.features ul li:first-child {
+  margin-top: 0px;
+}
+
+/* gallery */
+.gallery {
+  width: 100%;
+  height: 550px;
+  margin-top: 125px;
+  display: flex;
+}
+.gallery .left-side {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.gallery .left-side img {
+  width: calc(100% - 20px);
+  height: calc(50% - 10px);
+  border-radius: 8px;
+}
+.gallery .right-side {
+  width: 55%;
+  height: 100%;
+}
+.gallery .right-side img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* others */
+.others {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 150px;
+}
+.others h1 {
+  color: #000000;
+  font-size: 32px;
+  font-family: "Manrope";
+  text-align: center;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+  text-transform: uppercase;
+}
+.others div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.others div div {
+  width: calc(100% / 3 - 50px);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.others img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+.others div div p {
+  color: #000000;
+  font-size: 24px;
+  font-family: "Manrope";
+  line-height: 33px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  margin-top: 32px;
+}
+.others div div button {
+  height: 48px;
+  width: 160px;
+  border-radius: 0px;
+  background-color: #d87d4a;
+  border: none;
+  cursor: pointer;
+  margin-top: 28px;
+  transition: 0.3s;
+
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Manrope";
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.others div div button:hover {
+  background-color: #FBAF85;
+}

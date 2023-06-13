@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import { useEffect } from "react";
 
 import Hero from "../../components/hero/Hero";
 import Products from "../../components/products/Products";
@@ -8,8 +9,14 @@ import Footer from "../../components/footer/Footer";
 import imageSpeaker from "../../assets/speaker-preview.png";
 import circles from "../../assets/pattern-circles.svg";
 import imageEarphones from "../../assets/earphones-preview.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
+  useEffect(() => {
+    // scroll to the top when the component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Hero />
@@ -24,7 +31,9 @@ function Home() {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <button>See Product</button>
+              <Link to="/speakers/zx9-speaker">
+                <button>See Product</button>
+              </Link>
             </div>
             <img className={styles.circles} src={circles} alt="circles" />
           </div>
@@ -32,7 +41,9 @@ function Home() {
           <div className={styles["product-2"]}>
             <div>
               <h1>ZX7 SPEAKER</h1>
-              <button>See Product</button>
+              <Link to="/speakers/zx7-speaker" style={{ width: "160px" }}>
+                <button>See Product</button>
+              </Link>
             </div>
           </div>
 
@@ -40,7 +51,9 @@ function Home() {
             <img src={imageEarphones} alt="product-3" />
             <div>
               <h1>YX1 EARPHONES</h1>
-              <button>See Product</button>
+              <Link to="/earphones/yx1-earphones" style={{ width: "160px" }}>
+                <button>See Product</button>
+              </Link>
             </div>
           </div>
         </section>
