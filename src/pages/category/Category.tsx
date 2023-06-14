@@ -1,5 +1,4 @@
 import styles from "./Category.module.css";
-import { useEffect } from "react";
 import data from "../../data/data.json";
 import { Link, useParams } from "react-router-dom";
 
@@ -10,11 +9,6 @@ import Footer from "../../components/footer/Footer";
 function Category() {
   const { category } = useParams();
   const products = data.filter(item => item.category === category);
-
-  useEffect(() => {
-    // scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, [category]);
 
   return (
     <div className={styles.container}>

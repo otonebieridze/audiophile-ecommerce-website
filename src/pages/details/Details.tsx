@@ -1,22 +1,57 @@
 import styles from "./Details.module.css";
 import data from "../../data/data.json";
-import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import Products from "../../components/products/Products";
 import Advert from "../../components/advert/Advert";
 import Footer from "../../components/footer/Footer";
 
+import { useContext, useState } from "react";
+import { MyContext } from "../../App";
+
 function Details() {
+  const context = useContext(MyContext);
   const params = useParams();
   const product = data.find(
     (item) => item.slug === params.product && item.category === params.category
   );
 
-  useEffect(() => {
-    // scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, [params]);
+  const [productQuantity, setProductQuantity] = useState(1);
+
+  function decreaseQuantity() {
+    if (productQuantity > 1) {
+      setProductQuantity(prev => prev - 1);
+    }
+  }
+  function increaseQuantity() {
+    setProductQuantity(prev => prev + 1);
+  }
+
+  function addToCart() {
+    if (!context?.cartProducts.find(item => item.id === product?.id)) {
+      context?.setCartProducts((prev: CartProduct[]) => [...prev, {
+        id: product?.id,
+        image: `.${product?.image.desktop}`,
+        name: product?.name,
+        price: product?.price,
+        quantity: productQuantity
+      }])
+    } else {
+      let cartProduct = context.cartProducts.find(item => item.id === product?.id);
+      context.setCartProducts(prev => prev.map(item => {
+        if (item.id === cartProduct?.id) {
+          return {
+            ...item,
+            quantity: productQuantity
+          }
+        } else {
+          return item
+        }
+      }))
+    }
+
+    setProductQuantity(1);
+  }
 
   return (
     <>
@@ -33,11 +68,16 @@ function Details() {
 
             <div className={styles["product-footer"]}>
               <div className={styles["quantity-handler"]}>
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
+                <button onClick={decreaseQuantity}>-</button>
+                <p>{productQuantity}</p>
+                <button onClick={increaseQuantity}>+</button>
               </div>
-              <button className={styles["add-btn"]}>ADD TO CART</button>
+              <button
+                className={styles["add-btn"]}
+                onClick={addToCart}
+              >
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>

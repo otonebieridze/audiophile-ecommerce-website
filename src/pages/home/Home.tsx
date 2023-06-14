@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import { useEffect } from "react";
 
 import Hero from "../../components/hero/Hero";
 import Products from "../../components/products/Products";
@@ -12,11 +11,6 @@ import imageEarphones from "../../assets/earphones-preview.jpg";
 import { Link } from "react-router-dom";
 
 function Home() {
-  useEffect(() => {
-    // scroll to the top when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div className={styles.container}>
       <Hero />

@@ -1,15 +1,30 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, createContext } from "react";
 
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Category from "./pages/category/Category";
 import Details from "./pages/details/Details";
+import ScrollToTop from "./ScrollToTop";
+import BlackScreen from "./components/blackScreen/BlackScreen";
+
+export const MyContext = createContext<ContextProps | null>(null);
 
 function App() {
+  const [cart, setCart] = useState(false);
+  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
+  
   return (
-    <>
+    <MyContext.Provider value={{
+      cart,
+      setCart,
+      cartProducts,
+      setCartProducts,
+    }}>
       <BrowserRouter>
+        {cart && <BlackScreen />}
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,8 +32,8 @@ function App() {
           <Route path="/:category/:product" element={<Details />} />
         </Routes>
       </BrowserRouter>
-    </>
-  )
+    </MyContext.Provider>
+  );
 }
 
 export default App;

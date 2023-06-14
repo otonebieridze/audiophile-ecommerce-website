@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
+import Cart from "../cart/Cart";
+import { MyContext } from "../../App";
+import { useContext } from "react";
+
 function Navbar() {
+  const context = useContext(MyContext);
+
   return (
     <div className={styles.container}>
       <div className={styles["nav-bar"]}>
@@ -43,7 +49,10 @@ function Navbar() {
         <FontAwesomeIcon
           className={styles["cart-icon"]}
           icon={faCartShopping}
+          onClick={() => context?.setCart(true)}
         />
+
+        <Cart />
       </div>
     </div>
   );
