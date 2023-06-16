@@ -14,3 +14,15 @@ type ContextProps = {
   cartProducts: CartProduct[];
   setCartProducts: React.Dispatch<React.SetStateAction<CartProduct[]>>;
 };
+
+type Values = {
+  address?: string,
+  city?: string,
+  country?: string
+  eMoneyNumber?: string,
+  eMoneyPin?: string,
+  email?: string,
+  name?: string, 
+  phone?: string,
+  zip?: string
+}

@@ -1,10 +1,18 @@
 import styles from "./Cart.module.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MyContext } from "../../App";
+import { Link, useNavigate } from "react-router-dom";
 
 function Cart() {
   const context = useContext(MyContext);
+  const navigate = useNavigate();
   let total = 0;
+
+  useEffect(() => {
+    if (context?.cartProducts.length === 0) {
+      navigate(-1);
+    }
+  }, [context?.cartProducts.length]);
 
   function decreaseQuantity(cartProduct: CartProduct) {
     if (cartProduct.quantity! > 1) {
@@ -51,7 +59,8 @@ function Cart() {
           </div>
           <div className={styles["cart-items"]}>
             {context.cartProducts.map((cartProduct) => {
-              total = total + cartProduct.price! * cartProduct.quantity!;
+              total += cartProduct.price! * cartProduct.quantity!;
+
               return (
                 <div key={cartProduct.id} className={styles["cart-item"]}>
                   <div
@@ -79,7 +88,23 @@ function Cart() {
             <p>TOTAL</p>
             <span>$ {total}</span>
           </div>
-          <button className={styles["checkout-btn"]}>checkout</button>
+
+          {context.cartProducts.length > 0 ? (
+            <Link
+              onClick={() => context.setCart(false)}
+              className={styles["checkout-btn"]}
+              to="/checkout"
+            >
+              <p>checkout</p>
+            </Link>
+          ) : (
+            <button
+              onClick={() => context.setCart(false)}
+              className={styles["checkout-btn"]}
+            >
+              <p>countinue shopping</p>
+            </button>
+          )}
         </div>
       )}
     </>

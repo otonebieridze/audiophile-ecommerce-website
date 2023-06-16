@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 
 import Products from "../../components/products/Products";
 import Advert from "../../components/advert/Advert";
-import Footer from "../../components/footer/Footer";
 
 function Category() {
   const { category } = useParams();
@@ -33,7 +32,6 @@ function Category() {
       <div style={{ width: "100%" }}>
         <Products />
         <Advert />
-        <Footer />
       </div>
     </div>
   );

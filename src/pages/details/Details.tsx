@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 
 import Products from "../../components/products/Products";
 import Advert from "../../components/advert/Advert";
-import Footer from "../../components/footer/Footer";
 
 import { useContext, useState } from "react";
 import { MyContext } from "../../App";
@@ -135,7 +134,6 @@ function Details() {
       </div>
       <Products />
       <Advert />
-      <Footer />
     </>
   );
 }

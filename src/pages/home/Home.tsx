@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import Hero from "../../components/hero/Hero";
 import Products from "../../components/products/Products";
 import Advert from "../../components/advert/Advert";
-import Footer from "../../components/footer/Footer";
 
 import imageSpeaker from "../../assets/speaker-preview.png";
 import circles from "../../assets/pattern-circles.svg";
@@ -53,7 +52,6 @@ function Home() {
         </section>
 
         <Advert />
-        <Footer />
       </div>
     </div>
   );
