@@ -1,0 +1,172 @@
+.container {
+  width: 540px;
+  min-height: 520px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+}
+.ordered {
+  width: calc(100% - 80px);
+  height: 100%;
+  margin: auto;
+}
+.ordered .order-icon {
+  height: 52px;
+  width: 52px;
+  margin-top: 40px;
+}
+.ordered h1 {
+  color: #000000;
+  font-size: 28px;
+  font-family: 'Manrope';
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 22px;
+}
+.ordered b {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Manrope';
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-top: 22px;
+}
+.ordered-products {
+  width: 100%;
+  min-height: 135px;
+  background-color: #F1F1F1;
+  border-radius: 8px;
+  display: flex;
+  margin-top: 33px;
+}
+.left-side {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-side .row {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.product-image {
+  width: 50px;
+  height: 50px;
+  margin-left: 24px;
+}
+.name-price {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name-price p {
+  color: #000000;
+  font-size: 15px;
+  font-family: 'Manrope';
+  font-weight: 700;
+  line-height: 25px;
+  margin-top: 0px;
+}
+.name-price span {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.quantity {
+  color: #000000;
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 0.5;
+  margin-right: 24px;
+}
+.line {
+  width: calc(100% - 48px);
+  height: 1px;
+  background-color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.08;
+  margin-top: 15px;
+}
+.others {
+  color: #000000;
+  font-size: 14px;
+  font-family: 'Manrope';
+  font-weight: 700;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.right-side {
+  width: 45%;
+  min-height: 100%;
+  background-color: #000000;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.grand {
+  color: #FFFFFF;
+  font-size: 15px;
+  font-family: 'Manrope';
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+}
+.total {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: 'Manrope';
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.back-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #D87D4A;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 42px;
+  margin-bottom: 40px;
+  transition: 0.3s;
+
+  color: #FFFFFF;
+  font-size: 13px;
+  font-family: 'Manrope';
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.back-btn:hover {
+  background-color: #FBAF85;
+}

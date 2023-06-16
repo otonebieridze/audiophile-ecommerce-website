@@ -16,6 +16,7 @@ export const MyContext = createContext<ContextProps | null>(null);
 function App() {
   const [cart, setCart] = useState(false);
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
+  const [ordered, setOrdered] = useState(false);
 
   return (
     <MyContext.Provider
@@ -24,10 +25,12 @@ function App() {
         setCart,
         cartProducts,
         setCartProducts,
+        ordered,
+        setOrdered,
       }}
     >
       <BrowserRouter>
-        {cart && <BlackScreen />}
+        {(cart || ordered) && <BlackScreen />}
         <ScrollToTop />
         <Navbar />
         <Routes>

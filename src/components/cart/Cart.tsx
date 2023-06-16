@@ -1,18 +1,12 @@
 import styles from "./Cart.module.css";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { MyContext } from "../../App";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const context = useContext(MyContext);
-  const navigate = useNavigate();
+  
   let total = 0;
-
-  useEffect(() => {
-    if (context?.cartProducts.length === 0) {
-      navigate(-1);
-    }
-  }, [context?.cartProducts.length]);
 
   function decreaseQuantity(cartProduct: CartProduct) {
     if (cartProduct.quantity! > 1) {

@@ -5,11 +5,20 @@ import InputMask from "react-input-mask";
 
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../App";
+import Ordered from "../../components/ordered/Ordered";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   const context = useContext(MyContext);
+  const navigate = useNavigate();
   const [checked, setChecked] = useState("e-money");
   const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    if (context?.cartProducts.length === 0) {
+      navigate(-1);
+    }
+  }, [context?.cartProducts.length]);
 
   const {
     register,
@@ -17,9 +26,8 @@ function Checkout() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(values: Values) {
-    alert("submited!");
-    console.log(values);
+  function onSubmit() {
+    context?.setOrdered(true);
   }
 
   useEffect(() => {
@@ -378,7 +386,7 @@ function Checkout() {
             </div>
             <div className={styles["grand-total"]}>
               <p>GRAND TOTAL</p>
-              <b>$ 5,446</b>
+              <b>{`$ ${total + 50}`}</b>
             </div>
             <button
               onClick={() => document.getElementById("submit-btn")?.click()}
@@ -388,6 +396,8 @@ function Checkout() {
           </div>
         </div>
       </div>
+
+      {context?.ordered && <Ordered />}
     </div>
   );
 }

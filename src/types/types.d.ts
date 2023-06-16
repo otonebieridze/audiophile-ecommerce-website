@@ -13,16 +13,6 @@ type ContextProps = {
   setCart(cart: boolean): void;
   cartProducts: CartProduct[];
   setCartProducts: React.Dispatch<React.SetStateAction<CartProduct[]>>;
+  ordered: boolean;
+  setOrdered: React.Dispatch<React.SetStateAction<boolean>>;
 };
-
-type Values = {
-  address?: string,
-  city?: string,
-  country?: string
-  eMoneyNumber?: string,
-  eMoneyPin?: string,
-  email?: string,
-  name?: string, 
-  phone?: string,
-  zip?: string
-}
