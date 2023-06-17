@@ -46,11 +46,15 @@ function Navbar() {
           </Link>
         </ul>
 
-        <FontAwesomeIcon
-          className={styles["cart-icon"]}
-          icon={faCartShopping}
-          onClick={() => context?.setCart(true)}
-        />
+        <div className={styles["cart-icon-div"]} onClick={() => context?.setCart(true)}>
+          <FontAwesomeIcon
+            className={styles["cart-icon"]}
+            icon={faCartShopping}
+          />
+          {context?.cartProducts.length! > 0 && <div className={styles.circle}>
+            {context?.cartProducts.length}
+          </div>}
+        </div>
 
         <Cart />
       </div>

@@ -42,8 +42,25 @@
   color: white;
   text-decoration: none;
 }
-.cart-icon {
-  font-size: 22px;
+.cart-icon-div {
+  position: relative;
   cursor: pointer;
+}
+.cart-icon {
+  font-size: 24px;
   transition: 0.3s;
+}
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #d87d4a;
+  font-size: 10px;
+  font-family: "Manrope";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -9px;
+  right: -9px;
 }

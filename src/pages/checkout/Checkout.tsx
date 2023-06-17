@@ -15,7 +15,7 @@ function Checkout() {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    if (context?.cartProducts.length === 0) {
+    if (context?.cartProducts.length === 0 && !context.submit) {
       navigate(-1);
     }
   }, [context?.cartProducts.length]);
@@ -39,8 +39,6 @@ function Checkout() {
 
   return (
     <div className={styles.container}>
-      <button className={styles["go-back"]}>Go Back</button>
-
       <div className={styles["checkout-container"]}>
         <div className={styles.checkout}>
           <h1>CHECKOUT</h1>

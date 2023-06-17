@@ -37,16 +37,7 @@ function Details() {
       }])
     } else {
       let cartProduct = context.cartProducts.find(item => item.id === product?.id);
-      context.setCartProducts(prev => prev.map(item => {
-        if (item.id === cartProduct?.id) {
-          return {
-            ...item,
-            quantity: productQuantity
-          }
-        } else {
-          return item
-        }
-      }))
+      alert(`${cartProduct?.name} is already in the cart`);
     }
 
     setProductQuantity(1);
@@ -55,8 +46,6 @@ function Details() {
   return (
     <>
       <div className={styles.container}>
-        <button className={styles["go-back"]}>Go Back</button>
-
         <div className={styles.product}>
           <img src={`.${product?.image.desktop}`} alt="product-img" />
           <div className={styles["product-info"]}>

@@ -4,22 +4,12 @@
   min-height: 500px;
   margin: auto;
 }
-.go-back {
-  background-color: transparent;
-  border: none;
-  color: #000000;
-  font-size: 15px;
-  font-family: "Manrope";
-  opacity: 0.5;
-  cursor: pointer;
-  margin-top: 65px;
-}
 .checkout-container {
   width: 100%;
   min-height: 500px;
   display: flex;
   justify-content: space-between;
-  margin-top: 35px;
+  margin-top: 60px;
 }
 
 .checkout {

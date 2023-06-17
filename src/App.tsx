@@ -17,6 +17,7 @@ function App() {
   const [cart, setCart] = useState(false);
   const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
   const [ordered, setOrdered] = useState(false);
+  const [submit, setSubmit] = useState(false);
 
   return (
     <MyContext.Provider
@@ -27,6 +28,8 @@ function App() {
         setCartProducts,
         ordered,
         setOrdered,
+        submit,
+        setSubmit
       }}
     >
       <BrowserRouter>

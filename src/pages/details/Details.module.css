@@ -4,16 +4,6 @@
   min-height: 100vh;
   margin: auto;
 }
-.go-back {
-  background-color: transparent;
-  border: none;
-  color: #000000;
-  font-size: 15px;
-  font-family: "Manrope";
-  opacity: 0.5;
-  cursor: pointer;
-  margin-top: 65px;
-}
 
 /* product */
 .product {
@@ -21,7 +11,7 @@
   height: 500px;
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 .product img {
   width: calc(50% - 30px);

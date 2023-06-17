@@ -11,9 +11,9 @@ function Ordered() {
 
   useEffect(() => {
     setTotal(0);
-    context?.cartProducts.map(item => {
-      setTotal(prev => prev + item.price! * item.quantity!);
-    })
+    context?.cartProducts.map((item) => {
+      setTotal((prev) => prev + item.price! * item.quantity!);
+    });
   }, [context?.cart]);
 
   return (
@@ -46,10 +46,19 @@ function Ordered() {
                   <span>{`$ ${context?.cartProducts[0].price}`}</span>
                 </div>
               </div>
-              <p className={styles.quantity}>{`x${context?.cartProducts[0].quantity}`}</p>
+              <p
+                className={styles.quantity}
+              >{`x${context?.cartProducts[0].quantity}`}</p>
             </div>
-            <div className={styles.line} />
-            <p className={styles.others}>and {context?.cartProducts.length! - 1} other item(s)</p>
+            {context?.cartProducts.length! > 1 && <div className={styles.line} />}
+            {context?.cartProducts.length! > 2 && (
+              <p className={styles.others}>
+                and {context?.cartProducts.length! - 1} other items
+              </p>
+            )}
+            {context?.cartProducts.length! === 2 && (
+              <p className={styles.others}>and 1 other item</p>
+            )}
           </div>
           <div className={styles["right-side"]}>
             <div>
@@ -58,7 +67,11 @@ function Ordered() {
             </div>
           </div>
         </div>
-        <Link to="/" onClick={() => context?.setOrdered(false)}>
+        <Link to="/" onClick={() => {
+          context?.setSubmit(true);
+          context?.setOrdered(false);
+          context?.setCartProducts([]);
+        }}>
           <button className={styles["back-btn"]}>BACK TO HOME</button>
         </Link>
       </div>

@@ -15,4 +15,6 @@ type ContextProps = {
   setCartProducts: React.Dispatch<React.SetStateAction<CartProduct[]>>;
   ordered: boolean;
   setOrdered: React.Dispatch<React.SetStateAction<boolean>>;
+  submit: boolean;
+  setSubmit: React.Dispatch<React.SetStateAction<boolean>>;
 };
