@@ -17,7 +17,7 @@ function Home() {
         <Products />
         <section>
           <div className={styles["product-1"]}>
-            <img className="speaker-img" src={imageSpeaker} alt="product-1" />
+            <img className={styles["speaker-img"]} src={imageSpeaker} alt="product-1" />
             <div className={styles["product-1-description"]}>
               <h1>ZX9 SPEAKER</h1>
               <p>

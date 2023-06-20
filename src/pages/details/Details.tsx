@@ -32,6 +32,7 @@ function Details() {
         id: product?.id,
         image: `.${product?.image.desktop}`,
         name: product?.name,
+        shortName: product?.shortName,
         price: product?.price,
         quantity: productQuantity
       }])

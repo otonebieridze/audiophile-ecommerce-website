@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   min-height: 100vh;
+  margin-top: 80px;
 }
 
 .main {
@@ -13,7 +14,7 @@
   width: calc(100% - 200px);
   max-width: 1300px;
   height: 500px;
-  background-color: #D87D4A;
+  background-color: #d87d4a;
   border-radius: 8px;
   margin: 150px auto;
   display: flex;
@@ -32,16 +33,16 @@
   height: 430px;
 }
 .main .product-1-description h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 50px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 .main .product-1-description p {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 15px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   opacity: 0.75;
   margin-top: 20px;
 }
@@ -54,15 +55,15 @@
   cursor: pointer;
   margin-top: 40px;
   transition: 0.3s;
-  
-  color: #FFFFFF;
+
+  color: #ffffff;
   font-size: 13px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .main .product-1-description button:hover {
-  background-color: #4C4C4C;
+  background-color: #4c4c4c;
 }
 .circles {
   width: 70%;
@@ -93,15 +94,17 @@
   justify-content: center;
   gap: 20px;
 }
-.main .product-2 h1,.main .product-3 h1 {
+.main .product-2 h1,
+.main .product-3 h1 {
   color: #000000;
   font-size: 28px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-left: 70px;
 }
-.main .product-2 button, .main .product-3 button {
+.main .product-2 button,
+.main .product-3 button {
   width: 160px;
   height: 48px;
   border: 1px solid #000000;
@@ -109,15 +112,16 @@
 
   color: #000000;
   font-size: 14px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;
 }
-.main .product-2 button:hover, .main .product-3 button:hover {
+.main .product-2 button:hover,
+.main .product-3 button:hover {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .main .product-3 {
@@ -143,4 +147,158 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+}
+
+
+/* MEDIA */
+@media (max-width: 1000px) {
+  .main .product-1 {
+    width: calc(100% - 50px);
+    height: 450px;
+  }
+  .main .product-1 .speaker-img {
+    width: 280px;
+    height: 430px;
+  }
+  .main .product-1-description {
+    width: 300px;
+    height: 390px;
+  }
+  .main .product-1-description h1 {
+    font-size: 45px;
+    letter-spacing: 2px;
+  }
+  .main .product-1-description p {
+    font-size: 14px;
+  }
+
+  .main .product-2 {
+    width: calc(100% - 50px);
+  }
+  
+  .main .product-3 {
+    width: calc(100% - 50px);
+  }
+}
+@media (max-width: 900px) {
+  .main .product-2 {
+    background-position: bottom 0 right -50px;
+  }
+}
+@media (max-width: 830px) {
+  .main .product-3 div {
+    align-items: center;
+  }
+  .main .product-3 h1 {
+    margin-left: 0px;
+  }
+  .main .product-3 button {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 650px) {
+  .main .product-3 {
+    height: 250px;
+  }
+  .main .product-3 h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+  .main .product-3 button {
+    width: 160px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 680px) {
+  .main .product-1 {
+    height: 700px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .product-1 .speaker-img {
+    width: 180px;
+    height: 250px;
+    margin-top: 50px;
+  }
+  .main .product-1-description {
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .circles {
+    display: none;
+  }
+
+  .main .product-2 {
+    height: 250px;
+    background-size: cover;
+  }
+}
+@media (max-width: 650px) {
+  .main .product-1 {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 545px) {
+  .main .product-2 div {
+    margin: auto;
+    align-items: center;
+  }
+  .main .product-2 h1 {
+    font-size: 20px;
+    margin-left: 0px;
+  }
+  .main .product-2 button {
+    height: 40px;
+    font-size: 12px;
+    margin-left: 0px;
+  }
+
+  .main .product-3 {
+    height: 500px;
+    flex-direction: column;
+  }
+  .main .product-3 img {
+    width: 100%;
+    height: calc(50% - 20px);
+  }
+  .main .product-3 div {
+    width: 100%;
+    height: calc(50% - 20px);
+  }
+}
+@media (max-width: 400px) {
+  .main .product-1 {
+    height: 465px;
+    margin-top: 0px;
+  }
+  .main .product-1 .speaker-img {
+    width: 135px;
+    height: 190px;
+    margin-top: 30px;
+  }
+  .main .product-1-description {
+    margin-top: 30px;
+  }
+  .main .product-1-description h1 {
+    font-size: 28px;
+    letter-spacing: 0px;
+  }
+  .main .product-1-description p {
+    width: 200px;
+    font-size: 14px;
+  }
+  .main .product-1-description button {
+    width: 135px;
+    height: 45px;
+    font-size: 12px;
+  }
+
+  .main .product-2 {
+    display: none;
+  }
 }

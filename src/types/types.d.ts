@@ -4,13 +4,14 @@ type CartProduct = {
   id?: number;
   image?: string;
   name?: string;
+  shortName?: string;
   price?: number;
   quantity?: number;
 };
 
 type ContextProps = {
   cart: boolean;
-  setCart(cart: boolean): void;
+  setCart: React.Dispatch<React.SetStateAction<boolean>>;
   cartProducts: CartProduct[];
   setCartProducts: React.Dispatch<React.SetStateAction<CartProduct[]>>;
   ordered: boolean;

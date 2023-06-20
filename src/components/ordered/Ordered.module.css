@@ -1,8 +1,8 @@
 .container {
   width: 540px;
-  min-height: 500px;
+  min-height: 300px;
   border-radius: 8px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -22,7 +22,7 @@
 .ordered h1 {
   color: #000000;
   font-size: 28px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 36px;
   letter-spacing: 1.2px;
@@ -33,7 +33,7 @@
 .ordered b {
   color: #000000;
   font-size: 15px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 500;
   line-height: 25px;
   opacity: 0.5;
@@ -42,7 +42,7 @@
 .ordered-products {
   width: 100%;
   min-height: 135px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   border-radius: 8px;
   display: flex;
   margin-top: 33px;
@@ -61,6 +61,11 @@
   justify-content: space-between;
   margin-top: 25px;
 }
+.img-name-price {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 .product-image {
   width: 50px;
   height: 50px;
@@ -71,17 +76,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 20px;
 }
 .name-price p {
   color: #000000;
   font-size: 15px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 25px;
   margin-top: 0px;
 }
 .name-price span {
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -92,7 +98,7 @@
 }
 .quantity {
   color: #000000;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   font-size: 15px;
   line-height: 25px;
@@ -110,7 +116,7 @@
 .others {
   color: #000000;
   font-size: 14px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 16px;
   opacity: 0.5;
@@ -130,17 +136,17 @@
   align-items: center;
 }
 .grand {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 15px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 500;
   line-height: 25px;
   opacity: 0.5;
 }
 .total {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 18px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 25px;
   text-transform: uppercase;
@@ -149,7 +155,7 @@
 .back-btn {
   width: 100%;
   height: 50px;
-  background-color: #D87D4A;
+  background-color: #d87d4a;
   border: none;
   outline: none;
   cursor: pointer;
@@ -157,9 +163,9 @@
   margin-bottom: 40px;
   transition: 0.3s;
 
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 13px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 18px;
   text-align: center;
@@ -168,5 +174,117 @@
   text-decoration: none;
 }
 .back-btn:hover {
-  background-color: #FBAF85;
+  background-color: #fbaf85;
+}
+
+/* MEDIA */
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 80px);
+  }
+  .ordered {
+    width: calc(100% - 60px);
+  }
+  .ordered-products {
+    flex-direction: column;
+  }
+  .ordered .order-icon {
+    height: 45px;
+    width: 45px;
+    margin-top: 30px;
+  }
+  .ordered h1 {
+    font-size: 25px;
+    line-height: 27px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .ordered b {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .ordered-products {
+    margin-top: 25px;
+  }
+  .left-side {
+    width: 100%;
+  }
+  .left-side .row {
+    margin-bottom: 25px;
+  }
+  .right-side {
+    width: 100%;
+    min-height: 100px;
+    align-items: flex-start;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 8px;
+  }
+  .right-side div {
+    margin-left: 25px;
+  }
+  .grand {
+    margin-bottom: 10px;
+  }
+  .total {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    width: calc(100% - 35px);
+  }
+}
+@media (max-width: 485px) {
+  .ordered h1 {
+    font-size: 20px;
+  }
+  .ordered b {
+    font-size: 13px;
+  }
+  .left-side .row {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .product-image {
+    margin-left: 12px;
+  }
+  .name-price p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .name-price span {
+    font-size: 12px;
+  }
+  .quantity {
+    font-size: 13px;
+  }
+  .others {
+    font-size: 12px;
+  }
+  .right-side {
+    min-height: 50px;
+  }
+  .grand {
+    font-size: 12px;
+    margin-top: 18px;
+    line-height: 12px;
+  }
+  .total {
+    font-size: 14px;
+    margin-bottom: 18px;
+    line-height: 12px;
+  }
+  .back-btn {
+    width: 100%;
+    height: 42px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 340px) {
+  .img-name-price {
+    gap: 2px;
+  }
 }

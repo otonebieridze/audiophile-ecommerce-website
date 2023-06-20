@@ -22,7 +22,7 @@ function Category() {
             {product.new && <h3>NEW PRODUCT</h3>}
             <h1>{product.name}</h1>
             <p>{product.description}</p>
-            <Link to={product.slug} style={{ width: "160px" }}>
+            <Link to={product.slug} style={{ width: "160px", height: "48px" }}>
               <button>See Product</button>
             </Link>
           </div>

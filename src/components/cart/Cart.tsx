@@ -64,7 +64,7 @@ function Cart() {
                   >
                     <img src={cartProduct.image} alt="cart-item-img" />
                     <div className={styles["name-price"]}>
-                      <p>{cartProduct.name}</p>
+                      <p>{cartProduct.shortName}</p>
                       <span>$ {cartProduct.price}</span>
                     </div>
                   </div>

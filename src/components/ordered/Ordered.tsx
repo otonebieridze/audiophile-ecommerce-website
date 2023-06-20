@@ -29,20 +29,14 @@ function Ordered() {
         <div className={styles["ordered-products"]}>
           <div className={styles["left-side"]}>
             <div className={styles.row}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "24px",
-                }}
-              >
+              <div className={styles["img-name-price"]}>
                 <img
                   className={styles["product-image"]}
                   src={context?.cartProducts[0].image}
                   alt="product-image"
                 />
                 <div className={styles["name-price"]}>
-                  <p>{context?.cartProducts[0].name}</p>
+                  <p>{context?.cartProducts[0].shortName}</p>
                   <span>{`$ ${context?.cartProducts[0].price}`}</span>
                 </div>
               </div>
@@ -50,7 +44,9 @@ function Ordered() {
                 className={styles.quantity}
               >{`x${context?.cartProducts[0].quantity}`}</p>
             </div>
-            {context?.cartProducts.length! > 1 && <div className={styles.line} />}
+            {context?.cartProducts.length! > 1 && (
+              <div className={styles.line} />
+            )}
             {context?.cartProducts.length! > 2 && (
               <p className={styles.others}>
                 and {context?.cartProducts.length! - 1} other items
@@ -67,11 +63,14 @@ function Ordered() {
             </div>
           </div>
         </div>
-        <Link to="/" onClick={() => {
-          context?.setSubmit(true);
-          context?.setOrdered(false);
-          context?.setCartProducts([]);
-        }}>
+        <Link
+          to="/"
+          onClick={() => {
+            context?.setSubmit(true);
+            context?.setOrdered(false);
+            context?.setCartProducts([]);
+          }}
+        >
           <button className={styles["back-btn"]}>BACK TO HOME</button>
         </Link>
       </div>

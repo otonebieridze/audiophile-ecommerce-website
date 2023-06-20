@@ -1,7 +1,7 @@
 .container {
   width: 380px;
-  min-height: 220px;
-  background-color: #FFFFFF;
+  min-height: 200px;
+  background-color: #ffffff;
   border-radius: 8px;
   position: absolute;
   top: 110px;
@@ -21,7 +21,7 @@
 .cart-header h1 {
   color: #000000;
   font-size: 19px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   line-height: 25px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
@@ -30,7 +30,7 @@
 .cart-header p {
   color: #000000;
   font-size: 16px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   line-height: 25px;
   text-decoration-line: underline;
   opacity: 0.5;
@@ -39,14 +39,14 @@
   margin-right: 25px;
 }
 .cart-header p:hover {
-  color: #D87D4A;
+  color: #d87d4a;
 }
 
 /* cart items */
 .cart-items {
   width: calc(100% - 50px);
   min-height: 1px;
-  max-height: 265px;
+  max-height: 180px;
   margin-top: 10px;
   overflow-y: auto;
 }
@@ -74,7 +74,7 @@
 .cart-item .name-price p {
   color: #000000;
   font-size: 15px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   line-height: 25px;
@@ -82,7 +82,7 @@
 .cart-item .name-price span {
   color: #000000;
   font-size: 14px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 25px;
   mix-blend-mode: normal;
@@ -91,14 +91,14 @@
 .cart-item .count-handler {
   min-width: 90px;
   height: 30px;
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   color: #000000;
   font-size: 14px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
 }
 .cart-item .count-handler span {
@@ -108,7 +108,7 @@
   transition: 0.2s;
 }
 .cart-item .count-handler span:hover {
-  color: #D87D4A;
+  color: #d87d4a;
 }
 
 .total {
@@ -122,7 +122,7 @@
 .total p {
   color: #000000;
   font-size: 15px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: bold;
   line-height: 25px;
   opacity: 0.5;
@@ -130,7 +130,7 @@
 .total span {
   color: #000000;
   font-size: 18px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: bold;
   line-height: 25px;
   text-align: center;
@@ -139,7 +139,7 @@
 .checkout-btn {
   width: calc(100% - 50px);
   height: 45px;
-  background-color: #D87D4A;
+  background-color: #d87d4a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,9 +149,9 @@
   margin-top: 23px;
   margin-bottom: 30px;
 
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 13px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 700;
   line-height: 18px;
   letter-spacing: 1px;
@@ -159,5 +159,111 @@
   text-decoration: none;
 }
 .checkout-btn:hover {
-  background-color: #FBAF85;
+  background-color: #fbaf85;
+}
+
+/* MEDIA */
+@media (max-width: 1000px) {
+  .container {
+    right: 25px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    width: calc(100% - 50px);
+  }
+  .cart-header h1, .cart-header p {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+  }
+  .total p {
+    font-size: 14px;
+  }
+  .total span {
+    font-size: 16px;
+  }
+  .checkout-btn {
+    height: 45px;
+    margin-top: 18px;
+    font-size: 11px;
+  }
+  .cart-item {
+    height: 60px;
+  }
+  .cart-item img {
+    width: 60px;
+  }
+  .cart-item .name-price {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cart-item .name-price p {
+    font-size: 13px;
+    line-height: 15px;
+  }
+  .cart-item .name-price span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .cart-item .count-handler {
+    min-width: 75px;
+    font-size: 12px;
+  }
+  .cart-item .count-handler span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 350px) {
+  .cart-header h1, .cart-header p {
+    font-size: 13px;
+    letter-spacing: 0.1px;
+  }
+  .cart-header h1 {
+    margin-left: 14px;
+  }
+  .cart-header p {
+    margin-right: 14px;
+  }
+  .total p {
+    font-size: 12px;
+  }
+  .total span {
+    font-size: 13px;
+  }
+  .checkout-btn {
+    font-size: 10px;
+  }
+  .cart-items {
+    width: calc(100% - 28px);
+  }
+  .cart-item {
+    height: 50px;
+  }
+  .cart-item img {
+    width: 50px;
+  }
+  .cart-item .name-price {
+    margin-left: 3px;
+  }
+  .cart-item .name-price p {
+    font-size: 11px;
+  }
+  .cart-item .name-price span {
+    font-size: 11px;
+  }
+  .cart-item .count-handler {
+    min-width: 60px;
+    font-size: 11px;
+  }
+  .cart-item .count-handler span {
+    font-size: 11px;
+  }
+  .total {
+    width: calc(100% - 28px);
+  }
+  .checkout-btn {
+    width: calc(100% - 28px);
+  }
 }

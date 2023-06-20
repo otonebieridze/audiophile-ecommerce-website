@@ -34,8 +34,9 @@ function Products() {
           key={index}
           style={{ textDecoration: "none" }}
           to={product.link}
+          className={styles.product}
         >
-          <div className={styles.product}>
+          <div>
             <img src={product.img} alt="product-img" />
             <h1>{product.name}</h1>
             <div className={styles.shopping}>

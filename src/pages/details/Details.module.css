@@ -2,7 +2,8 @@
   width: calc(100% - 200px);
   max-width: 1300px;
   min-height: 100vh;
-  margin: auto;
+  border: 1px solid transparent;
+  margin: 80px auto;
 }
 
 /* product */
@@ -247,4 +248,245 @@
 }
 .others div div button:hover {
   background-color: #FBAF85;
+}
+
+
+/* MEDIA */
+@media (max-width: 1000px) {
+  .container {
+    width: calc(100% - 50px);
+  }
+}
+@media (max-width: 800px) {
+  .product img {
+    width: calc(50% - 15px);
+    height: 100%;
+  }
+  .product .product-info {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 750px) {
+  .others h1 {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+  .others div {
+    margin-top: 25px;
+  }
+  .others div div {
+    width: calc(100% / 3 - 15px);
+  }
+  .others img {
+    height: 250px;
+  }
+  .others div div p {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+  .others div div button {
+    width: 150px;
+    height: 40px;
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .features {
+    flex-direction: column;
+  }
+  .features .left-side {
+    width: 100%;
+    min-height: 200px;
+  }
+  .features .right-side {
+    width: 500px;
+    min-height: 150px;
+    margin-top: 100px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .features ul {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 670px) {
+  .product div h3 {
+    font-size: 13px;
+    line-height: 10px;
+    letter-spacing: 8px;
+  }
+  .product div h1 {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+  .product div .description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .product div .price {
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+  }
+
+  .product-footer {
+    width: 100%;
+    height: 40px;
+    margin-top: 35px;
+  }
+  .product-footer .quantity-handler {
+    width: calc(45% - 20px);
+  }
+  .product-footer .quantity-handler button {
+    font-size: 12px;
+  }
+  .product-footer .add-btn {
+    width: 55%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 660px) {
+  .features .right-side {
+    width: 100%;
+  }
+
+  .gallery {
+    height: 400px;
+  }
+  .gallery .left-side img {
+    width: calc(100% - 10px);
+    height: calc(50% - 5px);
+  }
+}
+@media (max-width: 560px) {
+  .others div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .others div div:first-child {
+    margin-top: 10px;
+  }
+  .others div div {
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+  .others div div p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .others div div button {
+    height: 48px;
+    width: 160px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  .product {
+    height: 680px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product img {
+    width: 100%;
+    height: 280px;
+  }
+  .product .product-info {
+    width: 100%;
+    height: 400px;
+  }
+
+  .product-footer {
+    width: 290px;
+  }
+  .product-footer .quantity-handler {
+    width: 100px;
+    height: 100%;
+  }
+  .product-footer .quantity-handler button {
+    font-size: 15px;
+  }
+  .product-footer .add-btn {
+    width: 160px;
+    height: 100%;
+    font-size: 13px;
+  }
+
+  .features .right-side {
+    flex-direction: column;
+  }
+  .features .right-side ul {
+    margin-top: 40px;
+  }
+
+  .gallery {
+    width: 100%;
+    height: 700px;
+    flex-direction: column;
+  }
+  .gallery .left-side {
+    width: 100%;
+    height: 380px;
+  }
+  .gallery .left-side img {
+    width: 100%;
+    height: 180px;
+  }
+  .gallery .left-side img:last-child {
+    margin-top: 20px;
+  }
+  .gallery .right-side {
+    width: 100%;
+    height: 300px;
+  }
+  .gallery .right-side img {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .product div h3 {
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-top: 30px;
+  }
+
+  .product-footer {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .product-footer .quantity-handler {
+    width: calc(45% - 20px);
+  }
+  .product-footer .quantity-handler button {
+    font-size: 12px;
+  }
+  .product-footer .add-btn {
+    width: 55%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 340px) {
+  .others h1 {
+    font-size: 21px;
+    line-height: 20px;
+  }
+  .others div div p {
+    font-size: 19px;
+  }
+  .others div div button {
+    height: 40px;
+    width: 140px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
 }

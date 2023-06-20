@@ -8,8 +8,8 @@
   margin: 60px auto;
 }
 .product {
-  width: 320px;
-  height: 180px;
+  width: calc(100% / 3 - 20px);
+  height: 200px;
   background-color: #F1F1F1;
   border-radius: 8px;
   position: relative;
@@ -60,4 +60,24 @@
   font-size: 15px;
   margin-left: 6px;
   transform: translateY(100px);
+}
+
+
+/* MEDIA */
+@media (max-width: 1000px) {
+  .container {
+    width: calc(100% - 50px);
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    height: 750px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+  }
+  .product {
+    width: 100%;
+  }
 }
