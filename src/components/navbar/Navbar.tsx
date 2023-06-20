@@ -3,7 +3,11 @@ import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCartShopping, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faCartShopping,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
 import Cart from "../cart/Cart";
 import { MyContext } from "../../App";
@@ -14,12 +18,15 @@ function Navbar() {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ pointerEvents: context?.ordered ? "none" : "all" }}
+    >
       <div className={styles["nav-bar"]}>
         <FontAwesomeIcon
           className={styles["menu-icon"]}
           icon={menu ? faXmark : faBars}
-          onClick={() => setMenu(prev => !prev)}
+          onClick={() => setMenu((prev) => !prev)}
         />
 
         <Link to="/">
@@ -30,20 +37,32 @@ function Navbar() {
           <Link className={styles.link} to="/" onClick={() => setMenu(false)}>
             <li>home</li>
           </Link>
-          <Link className={styles.link} to="/headphones" onClick={() => setMenu(false)}>
+          <Link
+            className={styles.link}
+            to="/headphones"
+            onClick={() => setMenu(false)}
+          >
             <li>headphones</li>
           </Link>
-          <Link className={styles.link} to="/speakers" onClick={() => setMenu(false)}>
+          <Link
+            className={styles.link}
+            to="/speakers"
+            onClick={() => setMenu(false)}
+          >
             <li>speakers</li>
           </Link>
-          <Link className={styles.link} to="/earphones" onClick={() => setMenu(false)}>
+          <Link
+            className={styles.link}
+            to="/earphones"
+            onClick={() => setMenu(false)}
+          >
             <li>earphones</li>
           </Link>
         </ul>
 
         <div
           className={styles["cart-icon-div"]}
-          onClick={() => context?.setCart(prev => !prev)}
+          onClick={() => context?.setCart((prev) => !prev)}
         >
           <FontAwesomeIcon
             className={styles["cart-icon"]}

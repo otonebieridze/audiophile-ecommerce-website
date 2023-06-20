@@ -9,7 +9,15 @@ import circles from "../../assets/pattern-circles.svg";
 import imageEarphones from "../../assets/earphones-preview.jpg";
 import { Link } from "react-router-dom";
 
+import { useEffect, useContext } from "react";
+import { MyContext } from "../../App";
+
 function Home() {
+  const context = useContext(MyContext);
+  useEffect(() => {
+    context?.setSubmit(false);
+  }, [])
+
   return (
     <div className={styles.container}>
       <Hero />
